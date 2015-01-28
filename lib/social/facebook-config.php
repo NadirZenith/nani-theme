@@ -5,7 +5,7 @@ if ( WP_ENV === 'development' ) {
       define( 'FACEBOOK_APP_ID', FALSE );
       //define( 'FACEBOOK_APP_ID', '1549701461914029' ); // facebook app id development
 } else {
-      define( 'FACEBOOK_APP_ID', FALSE );
+      define( 'FACEBOOK_APP_ID', 1406967529600241 );
 }
 
 function nz_facebook_sdk_output() {
@@ -32,7 +32,7 @@ function nz_facebook_sdk_output() {
                         return;
                   js = d.createElement(s);
                   js.id = id;
-                  js.src = "//connect.facebook.net/es_LA/sdk.js";
+                  js.src = "//connect.facebook.net/en_US/sdk.js";
                   fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
 
@@ -77,7 +77,7 @@ function nz_fb_like( $url = null, $options = array() ) {
       $content = '<div class="nz-fblike">'
                 . '<div class="fb-like" data-href="' . $url . '" '
                 . 'data-layout="' . $atts[ 'layout' ] . '" '
-                . 'data-like="' . $atts[ 'like' ] . '" '
+                . 'data-action="' . $atts[ 'action' ] . '" '
                 . 'data-show-faces="' . $atts[ 'show-faces' ] . '" '
                 . 'data-share="' . $atts[ 'share' ] . '" '
                 . 'data-width="' . $atts[ 'width' ] . '" >'

@@ -10,6 +10,7 @@
             ?>
             <?php nz_fa_social_icons( $socials, 'social-icons-top social-icons' ); ?>
 
+            <?php //echo nz_fb_like_iframe( 'https://www.facebook.com/danieladuarte.pet' ); ?>
             <?php echo nz_fb_like_iframe( 'https://www.facebook.com/danieladuarte.pet' ); ?>
 
       </div>
