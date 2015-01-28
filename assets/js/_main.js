@@ -22,7 +22,8 @@
             // All pages
             common: {
                   init: function() {
-                        
+                        $('.fancybox, .gallery a').fancybox();
+
                         // JavaScript to be fired on all pages
                   }
             },

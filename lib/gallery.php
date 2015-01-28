@@ -137,3 +137,11 @@ function nzpure_attachment_image_attributes( $attr ) {
 }
 
 add_filter( 'wp_get_attachment_image_attributes', 'nzpure_attachment_image_attributes', 10, 1 );
+
+function is_landscape( $width, $height ) {
+      if ( $width > $height ) {
+            return true;
+      } else {
+            return false;
+      }
+}

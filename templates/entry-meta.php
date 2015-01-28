@@ -1,4 +1,4 @@
-<div class="byline author vcard post-cate">
+<div class="byline author vcard post-date">
       <?php echo __( 'By', 'nzpure' ); ?> 
       <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author" class="fn">
             <?php echo get_the_author(); ?>
@@ -11,13 +11,12 @@
       if ( is_single() ) {
             ?>
             <div class="fr">
-
                   <?php
-                  echo __( 'Category ', 'nzpure' );
+                  /* echo __( 'Category ', 'nzpure' ); */
                   the_category();
                   ?>
                   <?php
-                  the_tags( __( 'Tags ', 'nzpure' ) );
+                  the_tags( __( '', 'nzpure' ), '' );
                   ?>
             </div>
             <?php

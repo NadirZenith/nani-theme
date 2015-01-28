@@ -12,6 +12,9 @@ $portfolios = new CPT( array(
 );
 
 
+$portfolios->register_taxonomy( 'tecnica' );
+
+
 add_action( 'after_setup_theme', 'register_portfolio_image_sizes' );
 
 function register_portfolio_image_sizes() {

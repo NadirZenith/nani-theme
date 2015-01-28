@@ -1,4 +1,3 @@
-
 <article <?php post_class(); ?>>
       <div class="entry-summary pure-g">
             <?php
@@ -18,16 +17,22 @@
                         if ( get_post_gallery() ) :
                               $gallery = get_post_gallery( $post, false );
                               $ids = explode( ',', $gallery[ 'ids' ] );
-                              /*$selected = array_slice( $ids, 0, 2 );*/
+                              $selected = array_slice( $ids, 0, 2 );
                               ?>
-                              <div class="pure-g">
+                              <div class="pure-g mt15">
                                     <?php
-                                    foreach ( $ids as $id ) {
-                                          /* d( ( int ) $id ); */
+                                    foreach ( $selected as $id ) {
                                           ?>
                                           <div class="pure-u-1 pure-u-md-1-2">
                                                 <?php
-                                                echo wp_get_attachment_link( ( int ) $id, '350-150-thumb', false );
+                                                $upload = wp_upload_dir();
+                                                $attachmeta = wp_get_attachment_metadata( $id, true );
+                                                $base = dirname( $attachmeta[ 'file' ] );
+                                                $attachsize = $attachmeta[ 'sizes' ][ '350-150-thumb' ];
+                                                echo '<a href="' . get_permalink() . '">';
+                                                echo '<img width="' . $attachsize[ 'width' ] . '" height="' . $attachsize[ 'height' ] . '" alt="' . $attachsize[ 'file' ] . '" class="pure-img" src="' . $upload[ 'baseurl' ] . '/' . $base . '/' . $attachsize[ 'file' ] . '">';
+                                                //echo wp_get_attachment_link( ( int ) $id, '350-150-thumb', false );
+                                                echo '</a>';
                                                 ?>
                                           </div>
                                           <?php
