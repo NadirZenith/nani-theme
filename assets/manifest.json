@@ -1,0 +1,14 @@
+{
+  "dest": "assets/manifest.json",
+  "querystring": true,
+  "assets/css/main.min.css": {
+    "path": "assets/css/main.min.css",
+    "hash": "5a2f16ad331419f20a8526aded0b0b56",
+    "handle": "nzpure_css"
+  },
+  "assets/js/scripts.min.js": {
+    "path": "assets/js/scripts.min.js",
+    "hash": "17e187b661716cb0607b0b3fdbf78eb2",
+    "handle": "nzpure_js"
+  }
+}
