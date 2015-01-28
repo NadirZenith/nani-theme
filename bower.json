@@ -13,9 +13,10 @@
             "assets/vendor"
       ],
       "dependencies": {
-            "modernizr": "2.8.2",
+            "pure": "~0.5.0",
             "jquery": "1.11.1",
+            "modernizr": "2.8.2",
             "respond": "1.4.2",
-            "pure": "~0.5.0"
+            "fontawesome": "~4.2.0"
       }
 }

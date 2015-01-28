@@ -1,1 +1,71 @@
 .banner { }
+.tp-bannertimer{
+      background-color: fade(@brand-secondary, 50%); 
+      position: absolute;
+      top: 40px;
+}
+.rev_slider_wrapper{
+}
+.tp-bannershadow{
+      display: none;
+}
+body > header{
+      position: relative;
+      z-index: 1000;
+}
+.top-bar{
+      position: absolute;
+      top: 0px;
+      height: 40px;
+      width: 100%;
+      background-color: @brand-primary;
+}
+#social-area-top {
+      float: right;
+      .nz-fblike-iframe{
+            float: left;
+            margin-top: 10px;
+            width: 130px;
+            padding-left: 10px;
+            overflow: hidden;
+      }
+}
+.pure-menu ul{
+      float: right;
+}
+
+.main-menu{
+      /*background-color: rgba(200,200,200,0.3);*/
+      /*padding: 15px;*/
+      top: 50px;
+      width: 80%;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      border-radius: 8px;
+}
+
+.pure-menu.pure-menu-open{
+      background-color: transparent;
+}
+.pure-menu-heading img{
+      margin-top: -20px;
+      display: block;
+}
+.pure-menu a{
+      background-color: transparent;
+      color: @brand-secondary;
+      /*font-weight: 700;*/
+      /*font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+
+      font-family: 'Kaushan Script', serif;
+      font-size: 20px;
+      text-shadow: 2px 2px 2px fade(@brand-secondary, 50%);;
+}
+.pure-menu .pure-menu-selected a
+{
+      color: @brand-primary;
+      text-shadow: 2px 2px 2px fade(@brand-primary, 50%);;
+}

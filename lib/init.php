@@ -22,7 +22,7 @@ function nzpure_setup() {
       // http://codex.wordpress.org/Post_Thumbnails
       // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
       // http://codex.wordpress.org/Function_Reference/add_image_size
-      add_theme_support( 'post-thumbnails' );
+      /* add_theme_support( 'post-thumbnails' ); */
 
       // Add post formats
       // http://codex.wordpress.org/Post_Formats
@@ -37,6 +37,18 @@ function nzpure_setup() {
 }
 
 add_action( 'after_setup_theme', 'nzpure_setup' );
+
+
+/**
+ * remove default images sizes
+ */
+/* add_filter( 'intermediate_image_sizes', '__return_empty_array' ); */
+add_filter( 'intermediate_image_sizes', 'nz_intermediate_image_sizes' );
+
+function nz_intermediate_image_sizes( $sizes ) {
+      /*df($sizes);*/
+      return $sizes;
+}
 
 /**
  * Register sidebars

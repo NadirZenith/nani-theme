@@ -9,13 +9,13 @@ define( 'PURE_RESPONSIVE', TRUE );
 /**
  * Enable theme features
  */
-//add_theme_support( 'soil-clean-up' );         // Enable clean up from Soil
 //add_theme_support('soil-relative-urls');    // Enable relative URLs from Soil
-//add_theme_support( 'soil-nice-search' );      // Enable /?s= to /search/ redirect from Soil
+add_theme_support( 'soil-clean-up' );         // Enable clean up from Soil
+add_theme_support( 'soil-nice-search' );      // Enable /?s= to /search/ redirect from Soil
 add_theme_support( 'pure-gallery' );     // Enable pure thumbnails component on [gallery]
-add_theme_support( 'jquery-cdn' );            // Enable to load jQuery from the Google CDN
-add_theme_support( 'pure-cdn');            // Enable to load pure from yahoo cdn
-
+/* add_theme_support( 'jquery-cdn' );            // Enable to load jQuery from the Google CDN */
+/* add_theme_support( 'pure-cdn' );            // Enable to load pure from yahoo cdn */
+set_post_thumbnail_size( 750, 350, array( 'center', 'center' ) );
 
 if ( !defined( 'WP_ENV' ) ) {
       define( 'WP_ENV', 'production' );  // scripts.php checks for values 'production' or 'development'
@@ -55,6 +55,8 @@ function nzpure_display_sidebar() {
                        */
                       array(
                   'is_404',
+                  array( 'is_singular', 'portfolio' ),
+                  array( 'is_archive', 'portfolio' ),
                   'is_front_page'
                       ),
                       /**
@@ -75,14 +77,8 @@ function nzpure_display_sidebar() {
  * and media embeds (in pixels).
  *
  * Example: If the content area is 640px wide, set $content_width = 620; so images and videos will not overflow.
- * Default: 1140px is the default Bootstrap container width.
  */
 if ( !isset( $content_width ) ) {
       $content_width = 1140;
 }
 
-
-/**
- * remove default sizes
- */
-add_filter( 'intermediate_image_sizes', '__return_empty_array' );
