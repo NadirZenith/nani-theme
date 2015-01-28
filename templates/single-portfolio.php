@@ -23,10 +23,7 @@
                         <div class="entry-content pl15">
                               <?php the_content(); ?>
                         </div>
-                        <div>
-                              nice
-                              <?php echo nz_fb_like( get_the_permalink() ); ?>
-                        </div>
+                        <?php echo nz_fb_like( get_the_permalink() ); ?>
                   </header>
             </div>
             <?php
