@@ -18,6 +18,10 @@
             production - default
 
       - optional libraries into lib/
+            custom metadata -> git clone https://github.com/Automattic/custom-metadata.git
+
+            custom post type class -> git clone https://github.com/jjgrainger/wp-custom-post-type-class.git
+
             roots rewrites -> git clone  https://github.com/roots/roots-rewrites.git
 
             soil cleanup -> git clone https://github.com/roots/soil.git
