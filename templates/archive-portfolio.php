@@ -18,11 +18,11 @@
                         if ( get_post_gallery() ) :
                               $gallery = get_post_gallery( $post, false );
                               $ids = explode( ',', $gallery[ 'ids' ] );
-                              $selected = array_slice( $ids, 0, 2 );
+                              /*$selected = array_slice( $ids, 0, 2 );*/
                               ?>
                               <div class="pure-g">
                                     <?php
-                                    foreach ( $selected as $id ) {
+                                    foreach ( $ids as $id ) {
                                           /* d( ( int ) $id ); */
                                           ?>
                                           <div class="pure-u-1 pure-u-md-1-2">
