@@ -5,7 +5,7 @@ if ( WP_ENV === 'development' ) {
       define( 'FACEBOOK_APP_ID', FALSE );
       //define( 'FACEBOOK_APP_ID', '1549701461914029' ); // facebook app id development
 } else {
-      define( 'FACEBOOK_APP_ID', 1406967529600241 );
+      define( 'FACEBOOK_APP_ID', '1406967529600241' );
 }
 
 function nz_facebook_sdk_output() {
