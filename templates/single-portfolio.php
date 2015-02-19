@@ -33,6 +33,38 @@
                   $size = (isset( $gallery[ 'size' ] )) ? $gallery[ 'size' ] : 'large';
                   $ids = explode( ',', $gallery[ 'ids' ] );
                   ?>
+                  <div class="flex-images">
+                        <?php
+                        foreach ( $ids as $id ) {
+                              /*$img = wp_get_attachment_metadata( $id, false );*/
+                              $src = wp_get_attachment_image_src( $id, $size );
+                              echo '<div class="item" data-w="' . $src[ 1 ] . '" data-h="' . $src[ 2 ] . '">';
+                              echo '<a href="' . wp_get_attachment_url( $id ) . '" class="fancybox" data-fancybox-group="gallery">';
+
+                              echo '<img src="' . $src[ 0 ] . '" class="pure-img">';
+                              echo '</a>';
+                              echo '</div>';
+                              ?>
+                                                                                          <!--<div class="item" data-w="219" data-h="180"><img src="images/1.jpg"></div>-->
+                              <?php
+                        }
+                        ?>
+                  </div>
+                  <script>
+                        $(function() {
+                              $('.flex-images').flexImages({rowHeight: 250});
+                        });
+                  </script>
+                  <?php
+            endif;
+            ?>
+            <?php
+            //new gallery
+            if ( get_post_gallery() && false ) :
+                  $gallery = get_post_gallery( $post, false ); //ids, columns, size, src[]
+                  $size = (isset( $gallery[ 'size' ] )) ? $gallery[ 'size' ] : 'large';
+                  $ids = explode( ',', $gallery[ 'ids' ] );
+                  ?>
                   <div class="gallery">
                         <div class="pure-g">
                               <?php

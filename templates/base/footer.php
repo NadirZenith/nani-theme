@@ -1,4 +1,4 @@
 <div class="is-center">
-      copyright nz
-      <?php dynamic_sidebar( 'sidebar-footer' ); ?>
+      Daniela Duarte &copy; 2015
+      <?php //dynamic_sidebar( 'sidebar-footer' ); ?>
 </div>
